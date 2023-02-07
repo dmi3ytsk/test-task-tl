@@ -28,6 +28,7 @@ export default {
       }
       this.applyFilter(actualSearch)
       this.$router.replace({
+        name: 'home',
         query: actualSearch
       })
     },
