@@ -25,5 +25,18 @@
     "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "./src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmi3ytsk/test-task-tl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmi3ytsk/test-task-tl/issues"
+  },
+  "homepage": "https://github.com/dmi3ytsk/test-task-tl#readme"
 }
