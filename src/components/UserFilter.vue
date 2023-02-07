@@ -28,13 +28,13 @@ export default {
       }
       this.applyFilter(actualSearch)
       this.$router.replace({
-        name: 'home-gh',
+        path: "/",
         query: actualSearch
       })
     },
     resetFilter() {
       this.applyFilter(null)
-      this.$router.replace({ name: "home" })
+      this.$router.replace({ name: "home-gh" })
       this.userLogin = ""
       this.ordersFrom = null
       this.ordersTo = null
