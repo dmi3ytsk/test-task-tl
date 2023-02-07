@@ -27,8 +27,8 @@ export default {
         sortDir: this.sortDir
       }
       this.applyFilter(actualSearch)
-      this.$router.replace({
-        name: "query",
+      this.$router.
+      replace({
         query: actualSearch
       })
     },
