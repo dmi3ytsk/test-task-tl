@@ -3,21 +3,20 @@ import HomeView from "@/views/HomeView";
 
 const routes = [
   {
-    path: "/",
-    name: "home",
-    component: HomeView,
+    path: '/',
+    redirect: { name: 'home' }
   },
-  // {
-  //   path: "/test-task-tl/",
-  //   name: "home",
-  //   component: HomeView,
-  // },
   {
-    path: "index.html",
-    name: "home-gh",
-    component: HomeView,
+    path: '/test-task-tl/',
+    name: 'home',
+    component: HomeView
   },
-];
+  {
+    path: '/test-task-tl/:queryParams(.*)',
+    name: 'query',
+    component: HomeView,
+    props: true
+  }];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
