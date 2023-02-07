@@ -12,6 +12,11 @@ const routes = [
     name: "home",
     component: HomeView,
   },
+  {
+    path: "index.html",
+    name: "home-gh",
+    component: HomeView,
+  },
 ];
 
 const router = createRouter({
