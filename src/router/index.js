@@ -7,12 +7,12 @@ const routes = [
     redirect: { name: 'home' }
   },
   {
-    path: '/test-task-tl/',
+    path: '/index.html',
     name: 'home',
     component: HomeView
   },
   {
-    path: '/test-task-tl/:queryParams(.*)',
+    path: '/index.html :queryParams(.*)',
     name: 'query',
     component: HomeView,
     props: true

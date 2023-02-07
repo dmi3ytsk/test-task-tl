@@ -28,7 +28,7 @@ export default {
       }
       this.applyFilter(actualSearch)
       this.$router.replace({
-        path: "query",
+        name: "query",
         query: actualSearch
       })
     },
