@@ -10,12 +10,6 @@ const routes = [
     path: '/index.html',
     name: 'home',
     component: HomeView
-  },
-  {
-    path: '/index.html :queryParams(.*)',
-    name: 'query',
-    component: HomeView,
-    props: true
   }];
 
 const router = createRouter({
