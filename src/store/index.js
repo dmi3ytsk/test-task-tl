@@ -72,7 +72,7 @@ export default createStore({
           })
           .filter((user) => {
             return search.userStatus
-              ? user.status.includes(search.userStatus)
+              ? user.status.toLowerCase().includes(search.userStatus)
               : true;
           })
           .filter((user) => {
