@@ -42,6 +42,16 @@ export default {
       this.sortBy = "",
         this.sortDir = "asc"
     },
+    fromOrdersValidation() {
+      if (this.ordersTo) {
+        this.ordersFrom = this.ordersFrom > this.ordersTo ? this.ordersTo : this.ordersFrom
+      }
+    },
+    toOrdersValidation() {
+      if (this.ordersFrom) {
+        this.ordersTo = this.ordersTo < this.ordersFrom ? this.ordersFrom : this.ordersTo
+      }
+    },
   },
   watch: {
     $route() {
@@ -80,10 +90,11 @@ export default {
     <div class="filter__by-orders">
       <span>Заказы</span>
       <label> от
-        <input v-model="ordersFrom" type="number" min="0" placeholder="от" class="filter__order-input">
+        <input v-model="ordersFrom" type="number" min="0" @change="fromOrdersValidation" placeholder="от"
+          class="filter__order-input">
       </label>
       <label> до
-        <input v-model="ordersTo" type="number" min="0" placeholder="до" class="filter__order-input">
+        <input v-model="ordersTo" type="number" min="0" @change="toOrdersValidation" placeholder="до" class="filter__order-input">
       </label>
     </div>
     <div class="filter__by-status">
